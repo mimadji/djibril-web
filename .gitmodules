@@ -1,0 +1,4 @@
+[submodule "djibril-web/djibrilweb/themes/lynx"]
+	path = djibril-web/djibrilweb/themes/lynx
+	url = https://github.com/jpanther/lynx.git
+	branch = stable
