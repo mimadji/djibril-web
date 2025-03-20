@@ -20,7 +20,10 @@
 
 html, body {
     width: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
@@ -41,6 +44,10 @@ body {
     max-width: 360px;
     padding: 24px;
     background: var(--background);
+    flex-grow: 1; /* Pushes the footer down */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .profile img {
@@ -103,8 +110,9 @@ body {
 }
 
 footer {
-    position: absolute;
-    bottom: 10px;
+    width: 100%;
+    padding: 10px 0;
     font-size: 0.8rem;
     color: var(--muted-text);
+    text-align: center;
 }
