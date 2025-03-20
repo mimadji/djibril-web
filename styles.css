@@ -18,12 +18,18 @@
     }
 }
 
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
 html, body {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 body {
@@ -41,8 +47,10 @@ body {
 }
 
 .container {
-    max-width: 360px;
+    width: 100%;
+    max-width: 400px;
     padding: 24px;
+    box-sizing: border-box;
     background: var(--background);
     flex-grow: 1; /* Pushes the footer down */
     display: flex;
@@ -111,6 +119,8 @@ body {
 
 footer {
     width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     padding: 10px 0;
     font-size: 0.8rem;
     color: var(--muted-text);
