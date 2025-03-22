@@ -7,7 +7,7 @@
     
     <!-- Meta Tags for SEO -->
     <meta name="description" content="Building, breaking, and learning along the way. This is my little corner of the internet.">
-    <meta name="keywords" content="Photographer, Designer, Tinkerer, Creative, Developer, Djibril, Personal Blog">
+    <meta name="keywords" content="Michael Djibril, Sufio, Photographer, Designer, Developer">
     <meta name="author" content="Djibril">
 
     <!-- Favicon -->
@@ -15,31 +15,45 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 <body>
     <main class="container">
         <section class="profile">
-            <img src="djimi.jpeg" alt="Portrait of Michael Djibril">
-            <h1>Hey, I'm Djibril. 👋</h1>
-            <p>I work as the Head of Support at <a href="https://sufio.com/" target="_blank">Sufio</a>, and I obsess over making things just a little better.<p>
+            <a href="/">
+                <img src="djimi.jpeg" alt="Portrait of Michael Djibril">
+            </a>
+            <h1>Hey, I'm Djibril 👋</h1>
+            <p>I work as the Head of Support at <a href="https://sufio.com/" target="_blank" rel="noopener noreferrer">Sufio</a>, and I obsess over making things just a little better.</p>
         </section>
 
         <nav class="links">
-            <a href="https://linkedin.com/in/m2djibril" target="_blank">
+            <a href="https://linkedin.com/in/michael-djibril-1a73a6181" target="_blank">
                 <i class="ti ti-brand-linkedin"></i> Connect on LinkedIn
             </a>
             <!-- <a href="https://github.com/callmedjimi" target="_blank">
                 <i class="ti ti-brand-github"></i> Explore My GitHub
             </a> -->
             <a href="https://fotimnafilm.sk" target="_blank">
-                <i class="ti ti-notebook"></i> Read My Blog
+                <i class="ti ti-notebook"></i> Read My Blog <i class="ti ti-arrow-up-right small"></i>
             </a>
         </nav>        
     </main>
 
     <footer>
-        <p>&copy; 2025 Michael Djibril · All rights reserved.</p>
+        <p>
+            &copy; <span id="year"></span> Djibril · All rights reserved.<br>
+            No cookies, just links.
+        </p>
     </footer>
+
+    <!-- Get the year from the browser and update the footer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const year = new Date().getFullYear();
+          document.getElementById('year').textContent = year;
+        });
+      </script>      
 </body>
 </html>
