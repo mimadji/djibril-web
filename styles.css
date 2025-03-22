@@ -50,7 +50,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 400px;
+    max-width: 512px;
     padding: 24px;
     box-sizing: border-box;
     background: var(--background);
@@ -58,6 +58,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .profile img {
@@ -79,7 +80,7 @@ body {
     font-size: 0.9rem;
     color: var(--muted-text);
     margin-bottom: 16px;
-    line-height: 1.25;
+    line-height: 1.45;
 }
 
 .profile p a {
@@ -102,6 +103,7 @@ body {
     text-decoration: none;
     background: var(--link-bg);
     color: var(--text-color);
+    width: 20rem;
     padding: 10px 14px;
     border-radius: 8px;
     font-size: 0.95rem;
