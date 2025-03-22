@@ -30,6 +30,8 @@ html, body {
     display: flex;
     flex-direction: column;
     position: relative;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 body {
@@ -74,7 +76,7 @@ body {
 }
 
 .profile p {
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     color: var(--muted-text);
     margin-bottom: 16px;
     line-height: 1.25;
@@ -83,24 +85,24 @@ body {
 .profile p a {
     color: var(--muted-text);
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-underline-offset: .15rem;
 }
 
 .links {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.6rem;
 }
 
 .links a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 0.5rem;
     text-decoration: none;
     background: var(--link-bg);
     color: var(--text-color);
-    padding: 12px;
+    padding: 10px 14px;
     border-radius: 8px;
     font-size: 0.95rem;
     font-weight: 500;
@@ -110,6 +112,11 @@ body {
 
 .links a i {
     font-size: 1.6rem;
+}
+
+.links a i.small {
+    font-size: 1.2rem;
+    color: var(--muted-text);
 }
 
 .links a:hover {
