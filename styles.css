@@ -2,6 +2,7 @@
     --background: hsla(0, 0%, 100%, 1);;
     --text-color: hsla(0, 0%, 13%, 1);
     --secondary-text: hsla(0, 0%, 45%, 1);
+    --tertiary-text: hsla(0, 0%, 65%, 1);
     --link-bg: #f4f4f4;
     --link-hover-bg: #e8e8e8;
     --border-color: hsla(0, 0%, 81%, 1);;
@@ -63,8 +64,8 @@ body {
 }
 
 .profile img {
-    width: 92px;
-    height: 92px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 12px;
@@ -109,11 +110,10 @@ body {
     text-decoration: none;
     background: var(--link-bg);
     color: var(--text-color);
-    width: 20rem;
-    padding: 10px 14px;
+    padding: 10px 50px;
     border-radius: 8px;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 550;
     border: 1px solid var(--border-color);
     transition: background 0.2s ease, transform 0.2s ease;
 }
