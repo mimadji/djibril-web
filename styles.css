@@ -90,6 +90,11 @@ body {
     text-underline-offset: .15rem;
 }
 
+.profile p a:hover {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
 .links {
     display: flex;
     flex-direction: column;
