@@ -10,7 +10,8 @@
     @media (prefers-color-scheme: dark) {
         --background: hsla(0, 0%, 5%, 1);;
         --text-color: hsla(0, 0%, 95%, 1);
-        --secondary-text: hsla(0, 0%, 62%, 1);
+        --secondary-text: hsla(0, 0%, 78%, 1);
+        --tertiary-text: hsla(0, 0%, 62%, 1);
         --link-bg: #1e1e1e;
         --link-hover-bg: #292929;
         --border-color: hsla(0, 0%, 30%, 0.5);
@@ -132,6 +133,6 @@ footer {
     overflow: hidden;
     padding: 10px 0;
     font-size: 0.8rem;
-    color: var(--secondary-text);
+    color: var(--tertiary-text);
     text-align: center;
 }
