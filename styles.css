@@ -1,19 +1,19 @@
 :root {
-    --background: #ffffff;
-    --text-color: #1a1a1a;
-    --muted-text: #707070;
+    --background: hsla(0, 0%, 100%, 1);;
+    --text-color: hsla(0, 0%, 13%, 1);
+    --secondary-text: hsla(0, 0%, 45%, 1);
     --link-bg: #f4f4f4;
     --link-hover-bg: #e8e8e8;
-    --border-color: #e5e5e5;
+    --border-color: hsla(0, 0%, 81%, 1);;
     --shadow-color: rgba(0, 0, 0, 0.05);
 
     @media (prefers-color-scheme: dark) {
-        --background: #121212;
-        --text-color: #f5f5f5;
-        --muted-text: #a0a0a0;
+        --background: hsla(0, 0%, 5%, 1);;
+        --text-color: hsla(0, 0%, 95%, 1);
+        --secondary-text: hsla(0, 0%, 62%, 1);
         --link-bg: #1e1e1e;
         --link-hover-bg: #292929;
-        --border-color: #333;
+        --border-color: hsla(0, 0%, 30%, 0.5);
         --shadow-color: rgba(255, 255, 255, 0.05);
     }
 }
@@ -54,7 +54,7 @@ body {
     padding: 24px;
     box-sizing: border-box;
     background: var(--background);
-    flex-grow: 1; /* Pushes the footer down */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,13 +78,13 @@ body {
 
 .profile p {
     font-size: 0.9rem;
-    color: var(--muted-text);
+    color: var(--secondary-text);
     margin-bottom: 16px;
     line-height: 1.45;
 }
 
 .profile p a {
-    color: var(--muted-text);
+    color: var(--secondary-text);
     text-decoration: underline;
     text-underline-offset: .15rem;
 }
@@ -92,7 +92,7 @@ body {
 .links {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.85rem;
 }
 
 .links a {
@@ -118,7 +118,7 @@ body {
 
 .links a i.small {
     font-size: 1.2rem;
-    color: var(--muted-text);
+    color: var(--secondary-text);
 }
 
 .links a:hover {
@@ -132,6 +132,6 @@ footer {
     overflow: hidden;
     padding: 10px 0;
     font-size: 0.8rem;
-    color: var(--muted-text);
+    color: var(--secondary-text);
     text-align: center;
 }
