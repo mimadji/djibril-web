@@ -97,7 +97,8 @@ body {
 }
 
 .links {
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     gap: 0.85rem;
 }
@@ -110,7 +111,7 @@ body {
     text-decoration: none;
     background: var(--link-bg);
     color: var(--text-color);
-    padding: 10px 3rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 8px;
     font-size: 0.95rem;
     font-weight: 550;
