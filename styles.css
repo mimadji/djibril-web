@@ -52,7 +52,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 512px;
+    max-width: 576px;
     padding: 24px;
     box-sizing: border-box;
     background: var(--background);
@@ -92,7 +92,7 @@ body {
 
 .profile p {
     font-size: 0.9rem;
-    color: var(--secondary-text);
+    /* color: var(--secondary-text); */
     margin-bottom: 24px;
     line-height: 1.45;
 }
