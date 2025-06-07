@@ -83,6 +83,13 @@ body {
     font-weight: 600;
 }
 
+.profile h2 {
+    font-size: 1.15rem;
+    color: var(--secondary-text);
+    font-weight: 500;
+    margin: 8px 0 16px;
+}
+
 .profile p {
     font-size: 0.9rem;
     color: var(--secondary-text);
