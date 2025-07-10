@@ -133,6 +133,56 @@ body {
     transform: translateY(-1px);
 }
 
+.feature-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  position: relative;
+  width: 400px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  color: #007aff;
+  flex-shrink: 0;
+}
+
+.text h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.text p {
+  margin: 4px 0 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  opacity: 0.6;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 footer {
     width: 100%;
     max-width: 100%;
