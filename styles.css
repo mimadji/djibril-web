@@ -124,16 +124,12 @@ body {
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.links a i {
-    font-size: 1.6rem;
-}
-
 .links a:hover {
     background: var(--link-hover-bg);
     transform: translateY(-1px);
 }
 
-.links a > svg {
+a > svg {
   width: 0.85rem;
   position: relative;
   height: auto;
