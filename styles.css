@@ -133,6 +133,12 @@ body {
     transform: translateY(-1px);
 }
 
+.links a > svg {
+  width: 0.85rem;
+  position: relative;
+  height: auto;
+}
+
 .feature-card {
   background: white;
   border-radius: 16px;
