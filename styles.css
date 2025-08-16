@@ -90,7 +90,7 @@ body {
     line-height: 1.45;
 }
 
-.profile p a {
+.profile p a, .profile a {
     color: var(--secondary-text);
     text-decoration: underline;
     text-underline-offset: .15rem;
