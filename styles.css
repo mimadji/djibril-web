@@ -1,15 +1,17 @@
 :root {
-    --background: hsla(0, 0%, 100%, 1);;
+    --background: hsla(0, 0%, 100%, 1);
     --text-color: hsla(0, 0%, 13%, 1);
     --secondary-text: hsla(0, 0%, 45%, 1);
     --tertiary-text: hsla(0, 0%, 65%, 1);
     --link-bg: #f4f4f4;
     --link-hover-bg: #e8e8e8;
-    --border-color: hsla(0, 0%, 81%, 1);;
+    --border-color: hsla(0, 0%, 81%, 1);
     --shadow-color: rgba(0, 0, 0, 0.05);
+}
 
-    @media (prefers-color-scheme: dark) {
-        --background: hsla(0, 0%, 3%, 1);;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: hsla(0, 0%, 3%, 1);
         --text-color: hsla(0, 0%, 95%, 1);
         --secondary-text: hsla(0, 0%, 78%, 1);
         --tertiary-text: hsla(0, 0%, 62%, 1);
@@ -18,6 +20,28 @@
         --border-color: hsla(0, 0%, 30%, 0.5);
         --shadow-color: rgba(255, 255, 255, 0.05);
     }
+}
+
+[data-theme="dark"] {
+    --background: hsla(0, 0%, 3%, 1);
+    --text-color: hsla(0, 0%, 95%, 1);
+    --secondary-text: hsla(0, 0%, 78%, 1);
+    --tertiary-text: hsla(0, 0%, 62%, 1);
+    --link-bg: #1e1e1e;
+    --link-hover-bg: #292929;
+    --border-color: hsla(0, 0%, 30%, 0.5);
+    --shadow-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] {
+    --background: hsla(0, 0%, 100%, 1);
+    --text-color: hsla(0, 0%, 45%, 1);
+    --secondary-text: hsla(0, 0%, 45%, 1);
+    --tertiary-text: hsla(0, 0%, 65%, 1);
+    --link-bg: #f4f4f4;
+    --link-hover-bg: #e8e8e8;
+    --border-color: hsla(0, 0%, 81%, 1);
+    --shadow-color: rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -61,6 +85,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 12px;
+    box-shadow: var(--shadow-color);
 }
 
 .profile img {
@@ -70,11 +96,13 @@ body {
     object-fit: cover;
     margin-bottom: 12px;
     border: 2px solid var(--border-color);
-    transition: transform 0.3s ease;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .profile img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .profile h1 {
@@ -94,6 +122,7 @@ body {
     color: var(--secondary-text);
     text-decoration: underline;
     text-underline-offset: .15rem;
+    transition: color 0.2s ease;
 }
 
 .profile p a:hover, .profile a:hover {
@@ -189,8 +218,17 @@ footer {
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-    padding: 10px 0;
+    padding: 16px 0;
     font-size: 0.8rem;
     color: var(--tertiary-text);
     text-align: center;
 }
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Theme toggle is now a keyboard shortcut: Ctrl+T (or Cmd+T on Mac) */
