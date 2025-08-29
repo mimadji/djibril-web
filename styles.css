@@ -33,16 +33,16 @@
     --shadow-color: rgba(255, 255, 255, 0.05);
 }
 
-[data-theme="light"] {
-    --background: hsla(0, 0%, 100%, 1);
-    --text-color: hsla(0, 0%, 45%, 1);
-    --secondary-text: hsla(0, 0%, 45%, 1);
-    --tertiary-text: hsla(0, 0%, 65%, 1);
-    --link-bg: #f4f4f4;
-    --link-hover-bg: #e8e8e8;
-    --border-color: hsla(0, 0%, 81%, 1);
-    --shadow-color: rgba(0, 0, 0, 0.05);
-}
+    [data-theme="light"] {
+        --background: hsla(0, 0%, 100%, 1);
+        --text-color: hsla(0, 0%, 3%, 1);
+        --secondary-text: hsla(0, 0%, 45%, 1);
+        --tertiary-text: hsla(0, 0%, 65%, 1);
+        --link-bg: #f4f4f4;
+        --link-hover-bg: #e8e8e8;
+        --border-color: hsla(0, 0%, 81%, 1);
+        --shadow-color: rgba(0, 0, 0, 0.05);
+    }
 
 * {
     box-sizing: border-box;
