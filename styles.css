@@ -127,11 +127,6 @@ body {
     font-weight: 600;
 }
 
-/* Animated gradient entrance effect for main heading */
-/* removed intro-gradient reveal effect */
-
-/* Removed heading-specific entrance to avoid double animations */
-
 .profile p {
     font-size: 0.9rem;
     /* color: var(--secondary-text); */
@@ -251,5 +246,3 @@ footer {
     align-items: center;
     gap: 12px;
 }
-
-/* Theme toggle is now a keyboard shortcut: Ctrl+T (or Cmd+T on Mac) */
