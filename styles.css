@@ -317,96 +317,21 @@ footer {
     margin: 0;
 }
 
-.theme-toggle {
-    position: relative;
-    display: inline-block;
-    width: 44px;
-    height: 24px;
+.theme-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0.75rem;
+    color: hsl(var(--foreground));
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+    text-decoration: none;
     flex-shrink: 0;
-    cursor: pointer;
 }
 
-.theme-toggle-input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.theme-toggle-slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: hsl(var(--muted));
-    border: 1px solid hsl(var(--border));
-    transition: 0.3s ease;
-    border-radius: 24px;
-    display: flex;
-    align-items: center;
-    padding: 2px;
-}
-
-.theme-toggle-slider:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 2px;
-    bottom: 2px;
-    background-color: hsl(var(--foreground));
-    transition: 0.3s ease;
-    border-radius: 50%;
-    z-index: 2;
-}
-
-.theme-icon-sun,
-.theme-icon-moon {
-    position: absolute;
-    font-size: 12px;
-    line-height: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-}
-
-.theme-icon-sun {
-    left: 3px;
-    opacity: 1;
-    transform: scale(1);
-}
-
-.theme-icon-moon {
-    right: 3px;
-    opacity: 0;
-    transform: scale(0.5);
-}
-
-.theme-toggle-input:checked + .theme-toggle-slider {
-    background-color: hsl(var(--muted));
-}
-
-.theme-toggle-input:checked + .theme-toggle-slider:before {
-    transform: translateX(20px);
-}
-
-.theme-toggle-input:checked + .theme-toggle-slider .theme-icon-sun {
-    opacity: 0;
-    transform: scale(0.5);
-}
-
-.theme-toggle-input:checked + .theme-toggle-slider .theme-icon-moon {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.theme-toggle:hover .theme-toggle-slider {
-    opacity: 0.8;
+.theme-btn:hover {
+    opacity: 0.6;
 }
 
 

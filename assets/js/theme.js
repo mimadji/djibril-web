@@ -21,23 +21,27 @@ document.addEventListener('DOMContentLoaded', () => {
         
         html.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
+        updateThemeButton();
+    }
+    
+    // Update theme button text
+    function updateThemeButton() {
+        const currentTheme = html.getAttribute('data-theme');
+        const themeBtn = document.getElementById('theme-toggle-btn');
         
-        // Update toggle switch state
-        const themeToggle = document.getElementById('theme-toggle');
-        if (themeToggle) {
-            themeToggle.checked = newTheme === 'dark';
+        if (themeBtn) {
+            // Show the opposite theme as the button text (what you'll switch to)
+            themeBtn.textContent = currentTheme === 'dark' ? 'Light' : 'Dark';
+            themeBtn.setAttribute('aria-label', `Switch to ${currentTheme === 'dark' ? 'light' : 'dark'} theme`);
         }
     }
     
-    // Add change handler for theme toggle switch
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-        // Set initial state
-        const currentTheme = html.getAttribute('data-theme');
-        themeToggle.checked = currentTheme === 'dark';
-        
-        // Add change event listener
-        themeToggle.addEventListener('change', toggleTheme);
+    // Add click handler for theme button
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    if (themeBtn) {
+        themeBtn.addEventListener('click', toggleTheme);
+        // Set initial button text
+        updateThemeButton();
     }
     
     // Add keyboard shortcut listener
@@ -54,12 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!localStorage.getItem('theme')) {
             const newTheme = e.matches ? 'dark' : 'light';
             html.setAttribute('data-theme', newTheme);
-            
-            // Update toggle switch state
-            const themeToggle = document.getElementById('theme-toggle');
-            if (themeToggle) {
-                themeToggle.checked = newTheme === 'dark';
-            }
+            updateThemeButton();
         }
     });
 });
