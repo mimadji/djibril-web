@@ -21,6 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
         
         html.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
+        
+        // Update toggle switch state
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.checked = newTheme === 'dark';
+        }
+    }
+    
+    // Add change handler for theme toggle switch
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        // Set initial state
+        const currentTheme = html.getAttribute('data-theme');
+        themeToggle.checked = currentTheme === 'dark';
+        
+        // Add change event listener
+        themeToggle.addEventListener('change', toggleTheme);
     }
     
     // Add keyboard shortcut listener
@@ -35,7 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Listen for system theme changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
         if (!localStorage.getItem('theme')) {
-            html.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+            const newTheme = e.matches ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            
+            // Update toggle switch state
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.checked = newTheme === 'dark';
+            }
         }
     });
 });
