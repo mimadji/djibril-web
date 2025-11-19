@@ -389,7 +389,7 @@ footer {
     padding-top: 2px;
     display: block;
     min-width: 100px;
-    width: 100px;
+    /* width: 100px; */
     text-align: right;
 }
 
