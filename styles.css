@@ -492,6 +492,10 @@ footer {
     background-color: hsl(var(--muted-foreground));
 }
 
+.status-coming-soon .status-dot {
+    background-color: hsl(217, 91%, 60%);
+}
+
 @keyframes pulse {
     0%, 100% {
         opacity: 1;
