@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (themeBtn) {
             // Show the opposite theme as the button text (what you'll switch to)
-            themeBtn.textContent = currentTheme === 'dark' ? 'Light' : 'Dark';
+            const btnText = themeBtn.querySelector('.theme-btn-text');
+            if (btnText) {
+                btnText.textContent = currentTheme === 'dark' ? 'Light' : 'Dark';
+            }
             themeBtn.setAttribute('aria-label', `Switch to ${currentTheme === 'dark' ? 'light' : 'dark'} theme`);
         }
     }
@@ -46,6 +49,21 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Add keyboard shortcut listener
     document.addEventListener('keydown', (e) => {
+        // Press 't' to toggle theme (only if not typing in an input/textarea)
+        if (e.key === 't' || e.key === 'T') {
+            const activeElement = document.activeElement;
+            const isTyping = activeElement && (
+                activeElement.tagName === 'INPUT' ||
+                activeElement.tagName === 'TEXTAREA' ||
+                activeElement.isContentEditable
+            );
+            
+            if (!isTyping) {
+                e.preventDefault();
+                toggleTheme();
+            }
+        }
+        
         // Ctrl+Shift+L (Windows/Linux) or Cmd+Shift+L (Mac) - L for Light/Dark
         if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'L') {
             e.preventDefault();
